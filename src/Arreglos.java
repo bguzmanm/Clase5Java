@@ -22,14 +22,27 @@ public class Arreglos {
       numeros[i] = (int)(Math.random() * 89 + 10);
     }
 
-
+    System.out.println("ARREGLO ORIGINAL");
     for (int i = 0; i < numeros.length; i++) {
       System.out.printf("[%d]\n", numeros[i]);
     }
-    System.out.println("");
 
+    // Ordenar de mayor a menor, los valores del arreglo.
+    // Método burbuja
+    for (int i = 0; i < numeros.length; i++) {
+      for (int j = i; j < numeros.length; j++) {
+        if (numeros[j] > numeros[i]) {
+          int temp = numeros[j];
+          numeros[j] = numeros[i];
+          numeros[i] = temp;
+        }
+      }
+    }
 
-
+    System.out.println("ARREGLO ORDENADO");
+    for (int i = 0; i < numeros.length; i++) {
+      System.out.printf("[%d]\n", numeros[i]);
+    }
 
   }
 }
